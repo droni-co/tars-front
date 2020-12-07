@@ -43,7 +43,7 @@
     </v-main>
   </v-app>
 </template><div class="v-toast v-toast--top"></div>
-<script src="https://unpkg.com/tiptap-vuetify"></script>
+
 <script>
 import Navigation from './components/Navigation.vue';
 export default {

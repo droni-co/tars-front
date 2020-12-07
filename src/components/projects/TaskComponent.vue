@@ -1,92 +1,95 @@
 <template>
-  <v-card :loading="loading">
-    <v-toolbar dense elevation="0">
-      <v-toolbar-title>Tarea de prueba para bla bla</v-toolbar-title>
+  <div>
+    <v-card :loading="loading"  class="mb-2">
+      <v-toolbar dense elevation="0">
+        <v-toolbar-title>Tarea de prueba para bla bla</v-toolbar-title>
 
-      <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
 
-      <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn>
+        <v-btn icon>
+          <v-icon>mdi-magnify</v-icon>
+        </v-btn>
 
-      <v-btn icon>
-        <v-icon>mdi-heart</v-icon>
-      </v-btn>
-      <v-btn icon>
-        <v-icon>mdi-dots-vertical</v-icon>
-      </v-btn>
-    </v-toolbar>
+        <v-btn icon>
+          <v-icon>mdi-heart</v-icon>
+        </v-btn>
+        <v-btn icon>
+          <v-icon>mdi-dots-vertical</v-icon>
+        </v-btn>
+      </v-toolbar>
 
-    <v-card-text>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet perferendis velit blanditiis vitae! Quod ratione eos illum ullam facere, nobis commodi ex temporibus unde, et similique nulla ab pariatur autem!
-    </v-card-text>
-    <v-card-text>
-      <v-list-item-subtitle>
-        <span class="mr-3">
-          <v-icon small>mdi-calendar-alert</v-icon>
-          20 Junio 2019
-        </span>
-        <span class="mr-3">
-          <v-icon small>mdi-comment-text-multiple-outline</v-icon>
-          15
-        </span>
-        <span class="mr-3">
-          <v-icon small>mdi-paperclip</v-icon>
-          2
-        </span>
-        <span class="mr-3">
-          <v-icon small>mdi-calendar-alert</v-icon>
-          20 Junio 2019
-        </span>
-        <span class="mr-3">
-          <v-icon small>mdi-account-arrow-right-outline</v-icon>
-          Kalvin Manson
-        </span>
-        <span class="mr-3">
-          <v-icon small>mdi-update</v-icon>
-          Kalvin Manson 31 min ago
-        </span>
-        
-      </v-list-item-subtitle>
-    </v-card-text>
+      <v-card-text>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet perferendis velit blanditiis vitae! Quod ratione eos illum ullam facere, nobis commodi ex temporibus unde, et similique nulla ab pariatur autem!
+      </v-card-text>
+      <v-card-text>
+        <v-list-item-subtitle>
+          <span class="mr-3">
+            <v-icon small>mdi-calendar-alert</v-icon>
+            20 Junio 2019
+          </span>
+          <span class="mr-3">
+            <v-icon small>mdi-comment-text-multiple-outline</v-icon>
+            15
+          </span>
+          <span class="mr-3">
+            <v-icon small>mdi-paperclip</v-icon>
+            2
+          </span>
+          <span class="mr-3">
+            <v-icon small>mdi-calendar-alert</v-icon>
+            20 Junio 2019
+          </span>
+          <span class="mr-3">
+            <v-icon small>mdi-account-arrow-right-outline</v-icon>
+            Kalvin Manson
+          </span>
+          <span class="mr-3">
+            <v-icon small>mdi-update</v-icon>
+            Kalvin Manson 31 min ago
+          </span>
+          
+        </v-list-item-subtitle>
+      </v-card-text>
 
 
-    <v-list dense>
-      <v-subheader>Subtasks ToDo</v-subheader>
-      <v-list-item-group>
-        <v-list-item v-for="todo in todos" :key="todo.id" color="primary">
-          <v-list-item-avatar size="25" color="green">
-            <v-icon dark small>mdi-checkbox-marked-circle-outline</v-icon>
-          </v-list-item-avatar>
-          <v-list-item-content>
-            <v-list-item-title>{{ todo.name }}</v-list-item-title>
-            <v-list-item-subtitle><small>Kalvin Manson, Gustavo Barragan</small></v-list-item-subtitle>
-          </v-list-item-content>
-          <v-list-item-action>
-            <v-btn small text>
-              <v-icon small>
-                mdi-calendar-alert
-              </v-icon>
-              20 Junio 2019
-            </v-btn>
-          </v-list-item-action>
-          <v-list-item-action>
-            <v-btn small icon>
-              <v-icon small>
-                mdi-account-group-outline
-              </v-icon>
-            </v-btn>
-          </v-list-item-action>
-          <v-list-item-action>
-            <v-btn small icon color="red">
-              <v-icon small>
-                mdi-trash-can-outline
-              </v-icon>
-            </v-btn>
-          </v-list-item-action>
-        </v-list-item>
-      </v-list-item-group>
-    </v-list>
+      <v-list dense>
+        <v-subheader>Subtasks ToDo</v-subheader>
+        <v-list-item-group>
+          <v-list-item v-for="todo in todos" :key="todo.id" color="primary">
+            <v-list-item-avatar size="25" color="green">
+              <v-icon dark small>mdi-checkbox-marked-circle-outline</v-icon>
+            </v-list-item-avatar>
+            <v-list-item-content>
+              <v-list-item-title>{{ todo.name }}</v-list-item-title>
+              <v-list-item-subtitle><small>Kalvin Manson, Gustavo Barragan</small></v-list-item-subtitle>
+            </v-list-item-content>
+            <v-list-item-action>
+              <v-btn small text>
+                <v-icon small>
+                  mdi-calendar-alert
+                </v-icon>
+                20 Junio 2019
+              </v-btn>
+            </v-list-item-action>
+            <v-list-item-action>
+              <v-btn small icon>
+                <v-icon small>
+                  mdi-account-group-outline
+                </v-icon>
+              </v-btn>
+            </v-list-item-action>
+            <v-list-item-action>
+              <v-btn small icon color="red">
+                <v-icon small>
+                  mdi-trash-can-outline
+                </v-icon>
+              </v-btn>
+            </v-list-item-action>
+          </v-list-item>
+        </v-list-item-group>
+      </v-list>
+    </v-card>
+
     <v-card shaped v-for="comment in comments" :key="comment.id" class="mb-2">
       <v-card-text>
         <v-row>
@@ -101,15 +104,16 @@
       </v-card-text>
     </v-card>
     <v-card>
-      <tiptap-vuetify
-      placeholder="Write something …"
-    />
+      <tipeditor />
     </v-card>
-  </v-card>
+
+
+  </div>
 </template>
 
 <script>
   //import axios from 'axios'
+  import tipeditor from '../../components/tipEditor';
   export default {
     props: ['project', 'task'],
     data: () => ({
@@ -208,6 +212,9 @@
     },
     methods: {
       
+    },
+    components: {
+      tipeditor
     }
   }
 </script>
