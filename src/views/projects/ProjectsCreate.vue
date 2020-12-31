@@ -63,7 +63,9 @@
         </v-stepper-content>
 
         <v-stepper-content step="3">
-          <v-card class="mb-12" color="grey lighten-1" height="200px"></v-card>
+          <v-card class="mb-12">
+            <create-task-component :project="project" />
+          </v-card>
 
           <v-btn color="primary" @click="e1 = 1">
             Save
@@ -76,6 +78,7 @@
 <script>
 import axios from 'axios'
 import invite from '../../components/projects/Invite'
+import CreateTaskComponent from '../../components/projects/CreateTaskComponent';
 export default {
   computed: {},
   data() {
@@ -109,7 +112,8 @@ export default {
     }
   },
   components: {
-    invite
+    invite,
+    CreateTaskComponent
   }
 };
 </script>

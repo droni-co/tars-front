@@ -18,8 +18,6 @@
     </v-navigation-drawer>
 
     <project-header :project="project"/>
-    <v-row>
-      <v-col md="8" lg="9">
         <v-container>
           <v-list subheader three-line>
             <v-subheader inset>Folders</v-subheader>
@@ -79,17 +77,8 @@
                 >80</v-progress-circular>
               </v-list-item-action>
             </v-list-item>
-
-            <v-divider inset></v-divider>
-
-            <v-subheader inset>Files</v-subheader>
           </v-list>
         </v-container>
-      </v-col>
-      <v-col md="4" lg="3">
-        sidebar
-      </v-col>
-    </v-row>
   </div>
 </template>
 <script>

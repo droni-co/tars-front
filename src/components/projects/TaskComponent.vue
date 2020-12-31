@@ -3,18 +3,9 @@
     <v-card :loading="loading"  class="mb-2">
       <v-toolbar dense elevation="0">
         <v-toolbar-title>Tarea de prueba para bla bla</v-toolbar-title>
-
         <v-spacer></v-spacer>
-
-        <v-btn icon>
-          <v-icon>mdi-magnify</v-icon>
-        </v-btn>
-
-        <v-btn icon>
-          <v-icon>mdi-heart</v-icon>
-        </v-btn>
-        <v-btn icon>
-          <v-icon>mdi-dots-vertical</v-icon>
+        <v-btn icon color="red">
+          <v-icon>mdi-trash-can-outline</v-icon>
         </v-btn>
       </v-toolbar>
 
@@ -51,43 +42,7 @@
         </v-list-item-subtitle>
       </v-card-text>
 
-
-      <v-list dense>
-        <v-subheader>Subtasks ToDo</v-subheader>
-        <v-list-item-group>
-          <v-list-item v-for="todo in todos" :key="todo.id" color="primary">
-            <v-list-item-avatar size="25" color="green">
-              <v-icon dark small>mdi-checkbox-marked-circle-outline</v-icon>
-            </v-list-item-avatar>
-            <v-list-item-content>
-              <v-list-item-title>{{ todo.name }}</v-list-item-title>
-              <v-list-item-subtitle><small>Kalvin Manson, Gustavo Barragan</small></v-list-item-subtitle>
-            </v-list-item-content>
-            <v-list-item-action>
-              <v-btn small text>
-                <v-icon small>
-                  mdi-calendar-alert
-                </v-icon>
-                20 Junio 2019
-              </v-btn>
-            </v-list-item-action>
-            <v-list-item-action>
-              <v-btn small icon>
-                <v-icon small>
-                  mdi-account-group-outline
-                </v-icon>
-              </v-btn>
-            </v-list-item-action>
-            <v-list-item-action>
-              <v-btn small icon color="red">
-                <v-icon small>
-                  mdi-trash-can-outline
-                </v-icon>
-              </v-btn>
-            </v-list-item-action>
-          </v-list-item>
-        </v-list-item-group>
-      </v-list>
+      <todos :task="task"></todos>
     </v-card>
 
     <v-card shaped v-for="comment in comments" :key="comment.id" class="mb-2">
@@ -114,6 +69,7 @@
 <script>
   //import axios from 'axios'
   import tipeditor from '../../components/tipEditor';
+  import Todos from './TodosComponent';
   export default {
     props: ['project', 'task'],
     data: () => ({
@@ -138,16 +94,6 @@
           time: '9:47am',
           color: 'deep-purple lighten-1',
         }
-      ],
-      todos: [
-        {
-          id: 1,
-          name: 'hacer el front de la aplicacion',
-        },
-        {
-          id: 5,
-          name: 'conectar backend',
-        },
       ],
       newTask: null,
       comments: [
@@ -211,10 +157,13 @@
       
     },
     methods: {
-      
+      changeTodo() {
+        alert('hola mundo');
+      }
     },
     components: {
-      tipeditor
+      tipeditor,
+      Todos
     }
   }
 </script>

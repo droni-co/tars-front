@@ -13,9 +13,7 @@
 
       <v-spacer></v-spacer>
 
-      <v-btn icon>
-        <v-icon>mdi-heart</v-icon>
-      </v-btn>
+      <create-task-component :project="project" />
 
       <v-btn router-link :to="'/projects/'+project.id+'/members'" icon>
         <v-icon>mdi-account-multiple-outline</v-icon>
@@ -46,7 +44,9 @@
 </template>
 <script>
 import axios from 'axios'
+import CreateTaskComponent from './CreateTaskComponent.vue';
 export default {
+  components: { CreateTaskComponent },
   props: ['project'],
   data: () => ({
     apiurl: process.env.VUE_APP_API_URL,
